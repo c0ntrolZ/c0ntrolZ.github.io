@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yonathan Lanzmann</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-name">Yonathan Lanzmann</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="hero">
+      <h1>Yonathan Lanzmann</h1>
+      <p class="hero-title">MSc Computer Science · EPFL</p>
+      <p class="hero-pitch">Interested in LLM reasoning, evaluation, and alignment — and drawn to longer-horizon questions around world models and symbolic reasoning.</p>
+      <div class="hero-links">
+        <a href="mailto:y.lanzmann03@gmail.com">y.lanzmann03@gmail.com</a>
+        <a href="https://github.com/c0ntrolZ" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About</h2>
+      <p>I am a second-year Master's student in Computer Science at EPFL (GPA 5.3/6), with a background spanning machine learning, cryptography, and distributed systems. My research interest lies in understanding and improving the reasoning capabilities of large language models — including evaluation methodology, alignment, and the design of systems that can generalize robustly. I am particularly excited by emerging directions such as world models, neurosymbolic approaches, and the interplay between formal reasoning and learned representations. I am looking for a Master's thesis opportunity that lets me work on problems at this frontier.</p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">AI Internship</span>
+          <span class="entry-date">June – August 2026</span>
+        </div>
+        <div class="entry-sub">Brevan Howard · Incoming</div>
+        <p class="entry-desc">Incoming AI internship at Brevan Howard, a leading global hedge fund.</p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">AI Student Assistant Chatbot</span>
+          <span class="card-date">Mar – Jun 2025</span>
+        </div>
+        <p class="card-desc">Fine-tuned a large language model to enhance reasoning, enabling it to function as an AI student assistant. Developed and compared four approaches: DPO, MCQA, RAG, and Quantization.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">Transformers</span>
+          <span class="tag">LLM Fine-Tuning</span>
+          <span class="tag">DPO</span>
+          <span class="tag">RAG</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Privacy-Preserving Marketplace on Blockchain</span>
+          <span class="card-date">Sep – Dec 2025</span>
+        </div>
+        <p class="card-desc">Designed and formalized a complete cryptographic protocol for an anonymous-review marketplace on Ethereum. Implemented via Solidity smart contracts using zk-SNARKs (Groth16 circuits) and Merkle-tree constructions.</p>
+        <div class="tags">
+          <span class="tag">Solidity</span>
+          <span class="tag">zk-SNARKs</span>
+          <span class="tag">Circom</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Python</span>
+        </div>
+        <a class="card-link" href="https://github.com/c0ntrolZ/anonymousReputationSystem" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Machine Learning for FPGA Routing</span>
+          <span class="card-date">Oct – Dec 2024</span>
+        </div>
+        <p class="card-desc">Research on applying ML models to assist the FPGA routing process. Collected a domain-specific dataset, explored new data features and task formulations to improve prediction accuracy.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">ML</span>
+          <span class="tag">Research</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Secure Distributed Computing</span>
+          <span class="card-date">Oct – Dec 2024</span>
+        </div>
+        <p class="card-desc">Built a distributed machine learning system (training and inference) in Go over a peer-to-peer network, using homomorphic encryption to preserve data privacy during computation.</p>
+        <div class="tags">
+          <span class="tag">Go</span>
+          <span class="tag">Distributed Systems</span>
+          <span class="tag">Homomorphic Encryption</span>
+          <span class="tag">ML</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Sui Blockchain Hackathon — 3rd Place</span>
+          <span class="card-date">October 2023</span>
+        </div>
+        <p class="card-desc">Developed an escrow-like Web3 application for secure smart contract creation, placing 3rd out of 22 international teams and winning a $20k prize. Invited by Sui to attend conferences in Paris and Dubai.</p>
+        <div class="tags">
+          <span class="tag">Move</span>
+          <span class="tag">Sui Blockchain</span>
+          <span class="tag">Web3</span>
+        </div>
+        <a class="card-link" href="https://github.com/c0ntrolZ/TrustLink" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2>Education</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Master of Computer Science</span>
+          <span class="entry-date">Sep 2024 – Present</span>
+        </div>
+        <div class="entry-sub">EPFL · GPA 5.3/6</div>
+        <p class="entry-desc">Relevant courses: Modern Natural Language Processing, Machine Learning, Quantum Information, Decentralized Systems Engineering, Probabilistic Proofs, Software Security.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Exchange Year (3rd year of Bachelor)</span>
+          <span class="entry-date">Sep 2023 – Jul 2024</span>
+        </div>
+        <div class="entry-sub">Politecnico di Milano</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Bachelor of Computer Science</span>
+          <span class="entry-date">Sep 2021 – Jul 2024</span>
+        </div>
+        <div class="entry-sub">EPFL · GPA 5.13/6</div>
+        <p class="entry-desc">Relevant courses: Machine Learning, Algorithms, Cryptography, Probabilities &amp; Statistics, Theory of Computation, Computer Networks, Operating Systems, System Programming, Parallelism &amp; Concurrency, Stochastic Dynamic Models.</p>
+      </div>
+
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <span class="skill-label">Programming</span>
+          <span class="skill-value">Python, C/C++, Java, Scala, Go, JavaScript, VHDL, Assembly, SQL, Move</span>
+        </div>
+        <div class="skill-group">
+          <span class="skill-label">Frameworks</span>
+          <span class="skill-value">PyTorch, Transformers, NumPy, Flask, Vulkan</span>
+        </div>
+        <div class="skill-group">
+          <span class="skill-label">Tools</span>
+          <span class="skill-value">Git, Linux</span>
+        </div>
+        <div class="skill-group">
+          <span class="skill-label">Languages</span>
+          <span class="skill-value">French (native), English (fluent)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Feel free to reach out by email or explore my work on GitHub.</p>
+      <div class="contact-links">
+        <a href="mailto:y.lanzmann03@gmail.com">y.lanzmann03@gmail.com</a>
+        <a href="https://github.com/c0ntrolZ" target="_blank" rel="noopener">github.com/c0ntrolZ</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Yonathan Lanzmann · 2026</p>
+  </footer>
+
+</body>
+</html>
