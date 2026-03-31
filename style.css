@@ -52,6 +52,11 @@ a:hover {
   text-decoration: underline;
 }
 
+a:focus {
+  outline: 2px solid #2c5282;
+  outline-offset: 2px;
+}
+
 /* ── Layout ───────────────────────────────────────────────── */
 main {
   max-width: 720px;
@@ -288,6 +293,7 @@ footer {
 @media (max-width: 600px) {
   h1 { font-size: 1.8rem; }
   .nav-links { gap: 0.75rem; }
-  .skill-group { grid-template-columns: 1fr; gap: 0.2rem; }
+  .skill-group { grid-template-columns: 1fr; gap: 0.5rem; }
+  .hero-pitch { font-size: 0.95rem; }
   .entry-header, .card-header { flex-direction: column; }
 }
