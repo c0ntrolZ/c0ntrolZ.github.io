@@ -292,6 +292,23 @@ section.visible {
   background: var(--accent-dim);
 }
 
+.email-reveal {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--accent);
+  align-self: center;
+  animation: fadeIn 0.2s ease;
+}
+
+.email-reveal[hidden] {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-6px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
 /* ── Experience & Education entries ───────────────────────── */
 .entry {
   margin-bottom: 2rem;

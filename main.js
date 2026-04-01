@@ -23,6 +23,22 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
+  /* ── Email reveal ─────────────────────────────────────────── */
+  var emailBtn = document.getElementById('reveal-email-btn');
+  var emailSpan = document.getElementById('email-reveal');
+  if (emailBtn && emailSpan) {
+    emailBtn.addEventListener('click', function () {
+      var hidden = emailSpan.hasAttribute('hidden');
+      if (hidden) {
+        emailSpan.removeAttribute('hidden');
+        emailBtn.textContent = 'Hide';
+      } else {
+        emailSpan.setAttribute('hidden', '');
+        emailBtn.textContent = 'Get in touch';
+      }
+    });
+  }
+
   /* ── Card details toggle ──────────────────────────────────── */
   document.querySelectorAll('[data-toggle]').forEach(function (toggleBtn) {
     toggleBtn.addEventListener('click', function () {
