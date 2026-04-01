@@ -442,6 +442,14 @@ section.visible {
   gap: 0.5rem;
   flex-wrap: wrap;
   padding-top: 0.25rem;
+  align-items: center;
+}
+
+.private-note {
+  font-size: 0.72rem;
+  color: var(--text-subtle);
+  font-style: italic;
+  margin-left: 0.25rem;
 }
 
 /* ── Card Details (expandable) ────────────────────────────── */
