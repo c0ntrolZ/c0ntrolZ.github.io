@@ -1,18 +1,18 @@
 /* ── CSS Variables ────────────────────────────────────────── */
 :root {
-  --bg: #101d2e;
-  --surface: #172438;
-  --surface-2: #1e2f45;
-  --text: #e8f0f8;
-  --text-muted: #8ba3bb;
-  --text-subtle: #5a7490;
-  --accent: #38bdf8;
-  --accent-dim: rgba(56, 189, 248, 0.1);
-  --accent-border: rgba(56, 189, 248, 0.22);
-  --border: rgba(255, 255, 255, 0.06);
-  --border-strong: rgba(255, 255, 255, 0.12);
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --surface-2: #f1f5f9;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --text-subtle: #94a3b8;
+  --accent: #0284c7;
+  --accent-dim: rgba(14, 165, 233, 0.08);
+  --accent-border: rgba(14, 165, 233, 0.22);
+  --border: rgba(0, 0, 0, 0.07);
+  --border-strong: rgba(0, 0, 0, 0.12);
   --radius: 12px;
-  --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   --glow: 0 0 0 1px var(--accent-border), 0 4px 20px rgba(56, 189, 248, 0.12);
 }
 
@@ -129,7 +129,7 @@ section.visible {
 #navbar {
   position: sticky;
   top: 0;
-  background: rgba(16, 29, 46, 0.88);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
@@ -258,13 +258,13 @@ section.visible {
 
 .btn-primary {
   background: var(--accent);
-  color: #060c14;
+  color: #ffffff;
   border-color: var(--accent);
 }
 
 .btn-primary:hover {
-  background: #7dd3fc;
-  border-color: #7dd3fc;
+  background: #0ea5e9;
+  border-color: #0ea5e9;
 }
 
 .btn-outline {
