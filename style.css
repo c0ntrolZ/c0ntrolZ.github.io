@@ -1,11 +1,11 @@
 /* ── CSS Variables ────────────────────────────────────────── */
 :root {
-  --bg: #060c14;
-  --surface: #0d1826;
-  --surface-2: #152030;
-  --text: #dde6f0;
-  --text-muted: #7a8fa8;
-  --text-subtle: #465870;
+  --bg: #101d2e;
+  --surface: #172438;
+  --surface-2: #1e2f45;
+  --text: #e8f0f8;
+  --text-muted: #8ba3bb;
+  --text-subtle: #5a7490;
   --accent: #38bdf8;
   --accent-dim: rgba(56, 189, 248, 0.1);
   --accent-border: rgba(56, 189, 248, 0.22);
@@ -129,7 +129,7 @@ section.visible {
 #navbar {
   position: sticky;
   top: 0;
-  background: rgba(6, 12, 20, 0.85);
+  background: rgba(16, 29, 46, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
