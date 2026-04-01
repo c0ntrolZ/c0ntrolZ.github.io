@@ -2,43 +2,60 @@
   'use strict';
 
   /* ── Progress bar ─────────────────────────────────────────── */
-  const bar = document.createElement('div');
+  var bar = document.createElement('div');
   bar.id = 'progress-bar';
   document.body.prepend(bar);
 
   function updateProgress() {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var scrollTop = window.scrollY;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
     bar.style.width = docHeight > 0 ? (scrollTop / docHeight * 100) + '%' : '0%';
   }
 
   /* ── Back to top ──────────────────────────────────────────── */
-  const btn = document.createElement('button');
-  btn.id = 'back-to-top';
-  btn.setAttribute('aria-label', 'Back to top');
-  btn.innerHTML = '↑';
-  document.body.appendChild(btn);
+  var topBtn = document.createElement('button');
+  topBtn.id = 'back-to-top';
+  topBtn.setAttribute('aria-label', 'Back to top');
+  topBtn.innerHTML = '↑';
+  document.body.appendChild(topBtn);
 
-  btn.addEventListener('click', function () {
+  topBtn.addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-  /* ── Active nav + scroll reveal ───────────────────────────── */
-  const navLinks = document.querySelectorAll('.nav-links a');
-  const sections = document.querySelectorAll('main section');
+  /* ── Card details toggle ──────────────────────────────────── */
+  document.querySelectorAll('[data-toggle]').forEach(function (toggleBtn) {
+    toggleBtn.addEventListener('click', function () {
+      var targetId = toggleBtn.getAttribute('data-toggle');
+      var details = document.getElementById(targetId);
+      if (!details) return;
+      var isOpen = !details.hasAttribute('hidden');
+      if (isOpen) {
+        details.setAttribute('hidden', '');
+        toggleBtn.textContent = 'Details ↓';
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      } else {
+        details.removeAttribute('hidden');
+        toggleBtn.textContent = 'Details ↑';
+        toggleBtn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
 
-  const observer = new IntersectionObserver(
+  /* ── Active nav + scroll reveal ───────────────────────────── */
+  var navLinks = document.querySelectorAll('.nav-links a');
+  var sections = document.querySelectorAll('main section');
+
+  var observer = new IntersectionObserver(
     function (entries) {
       entries.forEach(function (entry) {
-        // Scroll reveal
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
         }
-        // Active nav
         if (entry.isIntersecting && entry.intersectionRatio >= 0.15) {
           navLinks.forEach(function (link) { link.classList.remove('active'); });
-          const id = entry.target.id;
-          const active = document.querySelector('.nav-links a[href="#' + id + '"]');
+          var id = entry.target.id;
+          var active = document.querySelector('.nav-links a[href="#' + id + '"]');
           if (active) active.classList.add('active');
         }
       });
@@ -52,9 +69,9 @@
   window.addEventListener('scroll', function () {
     updateProgress();
     if (window.scrollY > 300) {
-      btn.classList.add('visible');
+      topBtn.classList.add('visible');
     } else {
-      btn.classList.remove('visible');
+      topBtn.classList.remove('visible');
     }
   }, { passive: true });
 
