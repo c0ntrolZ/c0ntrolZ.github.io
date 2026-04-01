@@ -193,6 +193,11 @@ section.visible {
   border: 3px solid var(--border);
   box-shadow: var(--shadow-md);
   flex-shrink: 0;
+  transition: box-shadow 0.25s ease;
+}
+
+.hero-photo:hover {
+  box-shadow: 0 0 0 4px var(--accent-light), 0 4px 20px rgba(79, 70, 229, 0.2);
 }
 
 .hero-content {
@@ -435,4 +440,16 @@ footer {
   .hero-pitch { font-size: 0.95rem; }
   .entry-header, .card-header { flex-direction: column; }
   #back-to-top { bottom: 1rem; right: 1rem; }
+}
+
+/* ── Reduced motion ───────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  section {
+    opacity: 1;
+    transform: none;
+  }
 }

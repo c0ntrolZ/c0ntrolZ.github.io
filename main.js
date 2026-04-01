@@ -35,7 +35,7 @@
           entry.target.classList.add('visible');
         }
         // Active nav
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.25) {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.15) {
           navLinks.forEach(function (link) { link.classList.remove('active'); });
           const id = entry.target.id;
           const active = document.querySelector('.nav-links a[href="#' + id + '"]');
@@ -43,7 +43,7 @@
         }
       });
     },
-    { threshold: [0, 0.25], rootMargin: '-60px 0px -40% 0px' }
+    { threshold: [0, 0.15], rootMargin: '-60px 0px -40% 0px' }
   );
 
   sections.forEach(function (s) { observer.observe(s); });
