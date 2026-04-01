@@ -6,7 +6,7 @@
   <title>Yonathan Lanzmann</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,12 +14,11 @@
   <!-- NAV -->
   <nav id="navbar">
     <div class="nav-inner">
-      <span class="nav-name">Yonathan Lanzmann</span>
+      <span class="nav-name">YL</span>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#papers">Papers</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -33,13 +32,13 @@
       <div class="hero-inner">
         <img class="hero-photo" src="assets/yonathan.jpeg" alt="Yonathan Lanzmann" />
         <div class="hero-content">
-          <h1>Yonathan Lanzmann</h1>
+          <h1>Yonathan<br>Lanzmann</h1>
           <p class="hero-title">MSc Computer Science · EPFL</p>
           <p class="hero-pitch">Interested in LLM reasoning, evaluation, and alignment — and drawn to longer-horizon questions around world models and symbolic reasoning.</p>
-          <div class="hero-links">
-            <a href="mailto:y.lanzmann03@gmail.com">y.lanzmann03@gmail.com</a>
-            <a href="mailto:yonathan.lanzmann@epfl.ch">yonathan.lanzmann@epfl.ch</a>
-            <a href="https://github.com/c0ntrolZ" target="_blank" rel="noopener">GitHub</a>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="assets/cv.pdf" download="Yonathan_Lanzmann_CV.pdf">Download CV</a>
+            <a class="btn btn-outline" href="mailto:yonathan.lanzmann@epfl.ch">Get in touch</a>
+            <a class="btn btn-ghost" href="https://github.com/c0ntrolZ" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
       </div>
@@ -47,13 +46,13 @@
 
     <!-- ABOUT -->
     <section id="about">
-      <h2>About</h2>
+      <h2><span>About</span></h2>
       <p>I am a second-year Master's student in Computer Science at EPFL (GPA 5.3/6), with a background spanning machine learning, cryptography, and distributed systems. My research interest lies in understanding and improving the reasoning capabilities of large language models — including evaluation methodology, alignment, and the design of systems that can generalize robustly. I am particularly excited by emerging directions such as world models, neurosymbolic approaches, and the interplay between formal reasoning and learned representations. I am looking for a Master's thesis opportunity that lets me work on problems at this frontier.</p>
     </section>
 
     <!-- EXPERIENCE -->
     <section id="experience">
-      <h2>Experience</h2>
+      <h2><span>Experience</span></h2>
       <div class="entry">
         <div class="entry-header">
           <span class="entry-title">Brevan Howard — AI Internship</span>
@@ -64,140 +63,136 @@
       </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- PROJECTS & RESEARCH -->
     <section id="projects">
-      <h2>Projects</h2>
+      <h2><span>Projects &amp; Research</span></h2>
 
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">AI Student Assistant Chatbot</span>
-          <span class="card-date">Mar – Jun 2025</span>
+      <div class="card" id="proj-1">
+        <div class="card-main">
+          <div class="card-header">
+            <span class="card-num">01</span>
+            <span class="card-title">AI Student Assistant Chatbot</span>
+            <span class="card-date">Mar – Jun 2025</span>
+          </div>
+          <p class="card-desc">Fine-tuned a large language model to enhance reasoning, enabling it to function as an AI student assistant. Developed and compared four approaches: DPO, MCQA, RAG, and Quantization.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">Transformers</span>
+            <span class="tag">LLM Fine-Tuning</span>
+            <span class="tag">DPO</span>
+            <span class="tag">RAG</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-ghost" data-toggle="proj-1-details" aria-expanded="false">Details ↓</button>
+            <a class="btn btn-ghost" href="https://github.com/c0ntrolZ/papers/blob/main/qwen3-ft-paper.pdf" target="_blank" rel="noopener">Read Paper</a>
+          </div>
         </div>
-        <p class="card-desc">Fine-tuned a large language model to enhance reasoning, enabling it to function as an AI student assistant. Developed and compared four approaches: DPO, MCQA, RAG, and Quantization.</p>
-        <div class="tags">
-          <span class="tag">Python</span>
-          <span class="tag">PyTorch</span>
-          <span class="tag">Transformers</span>
-          <span class="tag">LLM Fine-Tuning</span>
-          <span class="tag">DPO</span>
-          <span class="tag">RAG</span>
+        <div class="card-details" id="proj-1-details" hidden>
+          <p>Explored four distinct approaches to aligning a general-purpose LLM for STEM tutoring. DPO (Direct Preference Optimization) was used for preference-based alignment; MCQA fine-tuning targeted structured question-answering over course material; RAG grounded answers in lecture notes and slides; and quantization reduced inference cost while preserving accuracy. Models were evaluated on a held-out set of student questions across multiple EPFL courses.</p>
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">Privacy-Preserving Marketplace on Blockchain</span>
-          <span class="card-date">Sep – Dec 2025</span>
+      <div class="card" id="proj-2">
+        <div class="card-main">
+          <div class="card-header">
+            <span class="card-num">02</span>
+            <span class="card-title">Privacy-Preserving Marketplace on Blockchain</span>
+            <span class="card-date">Sep – Dec 2025</span>
+          </div>
+          <p class="card-desc">Designed and formalized a complete cryptographic protocol for an anonymous-review marketplace on Ethereum. Implemented via Solidity smart contracts using zk-SNARKs (Groth16 circuits) and Merkle-tree constructions.</p>
+          <div class="tags">
+            <span class="tag">Solidity</span>
+            <span class="tag">zk-SNARKs</span>
+            <span class="tag">Circom</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Python</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-ghost" data-toggle="proj-2-details" aria-expanded="false">Details ↓</button>
+            <a class="btn btn-ghost" href="https://github.com/c0ntrolZ/anonymousReputationSystem" target="_blank" rel="noopener">View Code</a>
+            <a class="btn btn-ghost" href="https://github.com/c0ntrolZ/papers/blob/main/blockchain-marketplace.pdf" target="_blank" rel="noopener">Read Paper</a>
+          </div>
         </div>
-        <p class="card-desc">Designed and formalized a complete cryptographic protocol for an anonymous-review marketplace on Ethereum. Implemented via Solidity smart contracts using zk-SNARKs (Groth16 circuits) and Merkle-tree constructions.</p>
-        <div class="tags">
-          <span class="tag">Solidity</span>
-          <span class="tag">zk-SNARKs</span>
-          <span class="tag">Circom</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">Python</span>
-        </div>
-        <a class="card-link" href="https://github.com/c0ntrolZ/anonymousReputationSystem" target="_blank" rel="noopener">View on GitHub →</a>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">Machine Learning for FPGA Routing</span>
-          <span class="card-date">Oct – Dec 2024</span>
-        </div>
-        <p class="card-desc">Research on applying ML models to assist the FPGA routing process. Collected a domain-specific dataset, explored new data features and task formulations to improve prediction accuracy.</p>
-        <div class="tags">
-          <span class="tag">Python</span>
-          <span class="tag">ML</span>
-          <span class="tag">Research</span>
+        <div class="card-details" id="proj-2-details" hidden>
+          <p>Buyers can leave anonymous reviews without revealing their identity to the seller or any observer. The core mechanism uses Groth16 zk-SNARK circuits compiled with Circom to prove purchase eligibility without disclosing the buyer's address. Merkle trees track eligible reviewers on-chain. Solidity contracts handle the full purchase-review lifecycle on Ethereum's Sepolia testnet, with a FastAPI backend and Node.js workers managing proof generation.</p>
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">Secure Distributed Computing</span>
-          <span class="card-date">Oct – Dec 2024</span>
+      <div class="card" id="proj-3">
+        <div class="card-main">
+          <div class="card-header">
+            <span class="card-num">03</span>
+            <span class="card-title">Machine Learning for FPGA Routing</span>
+            <span class="card-date">Oct – Dec 2024</span>
+          </div>
+          <p class="card-desc">Research on applying ML models to assist the FPGA routing process. Collected a domain-specific dataset, explored new data features and task formulations to improve prediction accuracy.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">ML</span>
+            <span class="tag">Research</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-ghost" data-toggle="proj-3-details" aria-expanded="false">Details ↓</button>
+            <a class="btn btn-ghost" href="https://github.com/c0ntrolZ/papers/blob/main/fpga-routing-ml.pdf" target="_blank" rel="noopener">Read Paper</a>
+          </div>
         </div>
-        <p class="card-desc">Built a distributed machine learning system (training and inference) in Go over a peer-to-peer network, using homomorphic encryption to preserve data privacy during computation.</p>
-        <div class="tags">
-          <span class="tag">Go</span>
-          <span class="tag">Distributed Systems</span>
-          <span class="tag">Homomorphic Encryption</span>
-          <span class="tag">ML</span>
+        <div class="card-details" id="proj-3-details" hidden>
+          <p>Investigated whether ML models could predict FPGA routing cost metrics (wirelength, congestion) from netlists, enabling faster hardware design iteration. A custom dataset was collected from real FPGA runs. Gradient boosting and neural network models were compared across different feature sets — including graph-based netlist features — and regression targets. Feature engineering showed significant improvements over naive baselines.</p>
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">Sui Blockchain Hackathon — 3rd Place</span>
-          <span class="card-date">October 2023</span>
+      <div class="card" id="proj-4">
+        <div class="card-main">
+          <div class="card-header">
+            <span class="card-num">04</span>
+            <span class="card-title">Secure Distributed Computing</span>
+            <span class="card-date">Oct – Dec 2024</span>
+          </div>
+          <p class="card-desc">Built a distributed machine learning system (training and inference) in Go over a peer-to-peer network, using homomorphic encryption to preserve data privacy during computation.</p>
+          <div class="tags">
+            <span class="tag">Go</span>
+            <span class="tag">Distributed Systems</span>
+            <span class="tag">Homomorphic Encryption</span>
+            <span class="tag">ML</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-ghost" data-toggle="proj-4-details" aria-expanded="false">Details ↓</button>
+          </div>
         </div>
-        <p class="card-desc">Developed an escrow-like Web3 application for secure smart contract creation, placing 3rd out of 22 international teams and winning a $20k prize. Invited by Sui to attend conferences in Paris and Dubai.</p>
-        <div class="tags">
-          <span class="tag">Move</span>
-          <span class="tag">Sui Blockchain</span>
-          <span class="tag">Web3</span>
+        <div class="card-details" id="proj-4-details" hidden>
+          <p>Trains a shared ML model across multiple nodes without any node revealing its private dataset. Nodes exchange encrypted model updates rather than raw data over a P2P network built in Go. The BFV homomorphic encryption scheme ensures updates remain encrypted during aggregation, so no observer can infer individual training samples. Validated on a linear regression task across 4 simulated nodes.</p>
         </div>
-        <a class="card-link" href="https://github.com/c0ntrolZ/TrustLink" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
 
-    </section>
-
-    <!-- PAPERS -->
-    <section id="papers">
-      <h2>Papers &amp; Reports</h2>
-
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">Fine-Tuning LLMs for STEM Education</span>
-          <span class="card-date">Mar – Jun 2025</span>
+      <div class="card" id="proj-5">
+        <div class="card-main">
+          <div class="card-header">
+            <span class="card-num">05</span>
+            <span class="card-title">Sui Blockchain Hackathon — 3rd Place</span>
+            <span class="card-date">October 2023</span>
+          </div>
+          <p class="card-desc">Developed an escrow-like Web3 application for secure smart contract creation, placing 3rd out of 22 international teams and winning a $20k prize. Invited by Sui to attend conferences in Paris and Dubai.</p>
+          <div class="tags">
+            <span class="tag">Move</span>
+            <span class="tag">Sui Blockchain</span>
+            <span class="tag">Web3</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-ghost" data-toggle="proj-5-details" aria-expanded="false">Details ↓</button>
+            <a class="btn btn-ghost" href="https://github.com/c0ntrolZ/TrustLink" target="_blank" rel="noopener">View Code</a>
+          </div>
         </div>
-        <p class="card-desc">Academic write-up on fine-tuning the Qwen3 language model to function as an AI student assistant. Covers DPO alignment, multiple-choice QA (MCQA), retrieval-augmented generation (RAG), and quantization techniques with experimental evaluation.</p>
-        <div class="tags">
-          <span class="tag">LLM</span>
-          <span class="tag">Fine-Tuning</span>
-          <span class="tag">DPO</span>
-          <span class="tag">RAG</span>
-          <span class="tag">NLP</span>
+        <div class="card-details" id="proj-5-details" hidden>
+          <p>TrustLink is an escrow application built on the Sui blockchain using the Move programming language. Two parties lock funds in a smart contract that releases automatically upon delivery confirmation, with an arbitration mechanism for disputes. Judging criteria included technical innovation, code quality, and UX. Placing 3rd out of 22 international teams led to an invitation to Sui's developer conferences in Paris and Dubai.</p>
         </div>
-        <a class="card-link" href="https://github.com/c0ntrolZ/papers/blob/main/qwen3-ft-paper.pdf" target="_blank" rel="noopener">Read Paper →</a>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">Machine Learning for FPGA Routing Cost Prediction</span>
-          <span class="card-date">Oct – Dec 2024</span>
-        </div>
-        <p class="card-desc">Research report on applying ML models to predict FPGA routing costs, with a focus on feature engineering and task formulation. Includes analysis of self-collected data and comparison of model performance across different objectives.</p>
-        <div class="tags">
-          <span class="tag">ML</span>
-          <span class="tag">FPGA</span>
-          <span class="tag">Research</span>
-          <span class="tag">Python</span>
-        </div>
-        <a class="card-link" href="https://github.com/c0ntrolZ/papers/blob/main/fpga-routing-ml.pdf" target="_blank" rel="noopener">Read Paper →</a>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">Privacy-Preserving Marketplace on Blockchain</span>
-          <span class="card-date">Sep – Dec 2025</span>
-        </div>
-        <p class="card-desc">Technical report formalizing a cryptographic protocol for an anonymous-review marketplace. Covers the system architecture, zk-SNARK circuit design, Merkle-tree constructions, and smart contract implementation on Ethereum.</p>
-        <div class="tags">
-          <span class="tag">Cryptography</span>
-          <span class="tag">zk-SNARKs</span>
-          <span class="tag">Blockchain</span>
-          <span class="tag">Solidity</span>
-        </div>
-        <a class="card-link" href="https://github.com/c0ntrolZ/papers/blob/main/blockchain-marketplace.pdf" target="_blank" rel="noopener">Read Paper →</a>
       </div>
 
     </section>
 
     <!-- EDUCATION -->
     <section id="education">
-      <h2>Education</h2>
+      <h2><span>Education</span></h2>
 
       <div class="entry">
         <div class="entry-header">
@@ -229,10 +224,9 @@
 
     <!-- CONTACT -->
     <section id="contact">
-      <h2>Contact</h2>
+      <h2><span>Contact</span></h2>
       <p>Feel free to reach out by email or explore my work on GitHub.</p>
       <div class="contact-links">
-        <a href="mailto:y.lanzmann03@gmail.com">y.lanzmann03@gmail.com</a>
         <a href="mailto:yonathan.lanzmann@epfl.ch">yonathan.lanzmann@epfl.ch</a>
         <a href="https://github.com/c0ntrolZ" target="_blank" rel="noopener">github.com/c0ntrolZ</a>
       </div>
