@@ -72,8 +72,10 @@ section {
 #navbar {
   position: sticky;
   top: 0;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(6px);
   border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
   z-index: 100;
   padding: 0.75rem 1.5rem;
 }
@@ -118,6 +120,27 @@ section {
   padding-bottom: 3rem;
 }
 
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.hero-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(44, 82, 130, 0.12);
+  flex-shrink: 0;
+}
+
+.hero-content {
+  flex: 1;
+}
+
 .hero-title {
   font-size: 1.1rem;
   color: #4a5568;
@@ -127,25 +150,43 @@ section {
 
 .hero-pitch {
   font-size: 1.05rem;
-  max-width: 600px;
   color: #2d3748;
   margin-bottom: 1.5rem;
 }
 
 .hero-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.25rem;
   flex-wrap: wrap;
 }
 
 .hero-links a {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid #bee3f8;
+  border-radius: 4px;
+  background: #ebf8ff;
+  color: #2c5282;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.hero-links a:hover {
+  background: #bee3f8;
+  border-color: #90cdf4;
+  text-decoration: none;
 }
 
 /* ── Experience & Education entries ───────────────────────── */
 .entry {
   margin-bottom: 2rem;
+  padding-left: 1rem;
+  border-left: 3px solid #e2e8f0;
+  transition: border-color 0.2s;
+}
+
+.entry:hover {
+  border-left-color: #2c5282;
 }
 
 .entry-header {
@@ -185,9 +226,16 @@ section {
 .card {
   background: #f7f7f7;
   border: 1px solid #e2e8f0;
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 1.25rem 1.5rem;
   margin-bottom: 1.25rem;
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(44, 82, 130, 0.08);
+  border-color: #bee3f8;
 }
 
 .card-header {
@@ -296,4 +344,6 @@ footer {
   .skill-group { grid-template-columns: 1fr; gap: 0.5rem; }
   .hero-pitch { font-size: 0.95rem; }
   .entry-header, .card-header { flex-direction: column; }
+  .hero-inner { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+  .hero-photo { width: 110px; height: 110px; }
 }
